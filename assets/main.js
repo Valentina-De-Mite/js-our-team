@@ -9,9 +9,9 @@ BONUS 1: Trasformare la stringa foto in una immagine effettiva
 BONUS 2: Organizzare i singoli membri in card/schede
 */
 
-// Creo l'arrey di oggetti:
+// Creo l'array di oggetti:
 
-let team = [
+const teamMembers = [
   {
     name_surname: "Warren Barnett",
     position: "Founder & CEO",
@@ -44,4 +44,11 @@ let team = [
   },
 ];
 
-console.log(team);
+// effettuo il console log degli oggetti dell'array
+teamMembers.forEach((teamMembers) => {
+  for (let value in teamMembers) {
+    console.log(`${teamMembers[value]}`);
+  }
+});
+
+//creo il loop di oggetti
