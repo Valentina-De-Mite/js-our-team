@@ -45,10 +45,16 @@ const teamMembers = [
 ];
 
 // effettuo il console log degli oggetti dell'array
-teamMembers.forEach((teamMembers) => {
-  for (let value in teamMembers) {
-    console.log(`${teamMembers[value]}`);
-  }
-});
+teamMembers.forEach((element) => {
+  console.log(element.position);
+  const markup = `<div class="card col-3 shadow rounded">
+      <img src="./assets/img/${element.image}"
+          class="card-img-top pt-4" alt="...">
+      <div class="card-body">
+          <h4 class="f-5">${element.name_surname}</h4>
+          <p>${element.position}</p>
+      </div>
+      </div>`;
 
-//creo il loop di oggetti
+  document.getElementById("markup").insertAdjacentHTML("beforeend", markup);
+});
